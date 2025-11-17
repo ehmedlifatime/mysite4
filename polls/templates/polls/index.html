@@ -1,0 +1,11 @@
+<h1>Mövcud Sorğular</h1>
+
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li>{{ question.question_text }} (ID: {{ question.id }})</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Hazırda heç bir sorğu mövcud deyil.</p>
+{% endif %}
